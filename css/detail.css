@@ -1,0 +1,160 @@
+/* header */
+header {
+    position: relative;
+    height: 65vh;
+    background-image: url(../img/header-subpage.jpg);
+    background-size: cover;
+    background-position: center -50px;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.2) 40%, rgba(0,0,0) 100%);
+}
+
+header h1 {
+    padding-top: 150px;
+    padding-bottom: 16px;
+}
+
+.section-1 {
+    margin-top: 70px;
+}
+
+/* section 2 */
+.section-2 {
+    margin: 100px 0;
+}
+.pricing-card {
+    background-color: #333333;
+    padding: 80px 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-card .h-lg {
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.pricing-card .price {
+    margin: 32px 0;
+}
+
+.pricing-card .primary-btn {
+    width: 100%;
+}
+
+.pricings-wrapper:nth-child(2) .pricing-card {
+    background-color: #AA8D3E;
+}
+
+.pricings-wrapper:nth-child(2) .pricing-card .primary-btn {
+    background-color: #fff;
+}
+
+/* section 3 */
+.event-card {
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    width: 100%;
+    height: 100%;
+}
+
+.event-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0) 50%, rgb(0,0,0) 85%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.event-card .content {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    z-index: 2;
+    color: #fff;
+}
+
+.event-card .content p {
+    font-size: 12px;
+}
+
+.event-card:hover {
+    margin-top: -30px;
+}
+
+/* section 4 */
+.section-4 {
+    margin: 100px 0;
+}
+.galeri-item img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.galeri-item:nth-child(3),
+.galeri-item:nth-child(4),
+.galeri-item:nth-child(5) {
+    margin-top: 30px;
+}
+
+
+.main-carousel {
+    width: 100%;
+}
+
+.carousel-cell {
+    width: 25%;
+    margin-right: 50px;
+}
+
+
+@media screen and (max-width: 991px) {
+    header {
+        height: 35vh;
+        background-position: center -150px;
+    }
+
+    .embed-maps {
+        margin-top: 32px;
+    }
+
+    .pricings-wrapper {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 45vh;
+    }
+    header h1 {
+        padding-top: 120px;
+    }
+    .carousel-cell {
+        width: 100%;
+    }
+}
